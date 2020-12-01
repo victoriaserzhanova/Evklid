@@ -1,0 +1,18 @@
+.about-us__container {
+	padding: 43px 0;
+}
+
+.about-us__title {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.about-us__descr {
+	line-height: 28px;
+	margin: 0;
+	margin-bottom: 7px;
+}
+
