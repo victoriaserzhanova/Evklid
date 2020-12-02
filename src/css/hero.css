@@ -1,5 +1,5 @@
 .hero__container {
-	padding: 33px 22px 40px 25px;
+	padding: 33px 22px 40px 23px;
 }
 
 .hero__title {
@@ -29,6 +29,6 @@
 	background-color: var(--accent-color);
 	border: none;
 	cursor: pointer;
-	margin-left: 39px;
+	margin-left: 41px;
 }
 
