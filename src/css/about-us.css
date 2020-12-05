@@ -1,5 +1,6 @@
 .about-us {
 	padding-top: 20px;
+	padding-bottom: 31px;
 }
 
 .about-us__title {
@@ -48,10 +49,11 @@
 .about-us__list-item {
 	background-repeat: no-repeat;
 	background-size: 43px 48px;
+	background-position: left 21px top 0;
 	padding-top: 63px;
 	margin-bottom: 19px;
 	position: relative;
-	
+
 }
 
 .about-us__list-item:first-child{
@@ -59,7 +61,8 @@
 }
 
 .about-us__list-item:nth-child(2){
-	background-image: url("../images/about-us-settings.svg");;
+	background-image: url("../images/about-us-settings.svg");
+	padding-top: 70px;
 }
 
 .about-us__list-item::before {
@@ -67,11 +70,15 @@
 	display: block;
 	position: absolute;
 	background-repeat: no-repeat;
-	top: 0;
+	top: 6px;
 	width: 43px;
   height: 43px;
   background: var(--accent-color);
   border-radius: 50%;
+}
+
+.about-us__list-item:nth-child(2):before {
+	top: 13px;
 }
 
 .about-us__item-span {

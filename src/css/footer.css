@@ -108,7 +108,7 @@ margin-top: auto;
 	color: var(--bg-color);
 	border: none;
 	cursor: pointer;
-	margin: 0 auto;
+	margin: 0 auto 14px;
 	min-height: 40px;
 	min-width: 180px;
 	display: block
@@ -118,6 +118,11 @@ margin-top: auto;
 	display: inline-block;
 	font-size: 16px;
 	padding-left: 6px;
+}
+
+.footer-center__checkbox {
+	background: transparent;
+	border: 1px solid var(--footer-font-color);
 }
 
 .footer-right {
