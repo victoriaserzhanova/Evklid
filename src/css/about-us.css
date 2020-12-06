@@ -18,10 +18,9 @@
 }
 
 .about-us__col--first {
-	background: url("../images/about-us.jpg");
+	background: url("../images/about-us-320.jpg");
 	background-repeat: no-repeat;
-	background-position: top;
-	background-size: 290px 200px;
+	background-size: contain;
 	margin-bottom: 40px;
 }
 
@@ -46,6 +45,8 @@
 	color: var(--accent-color);
 }
 
+
+
 .about-us__list-item {
 	background-repeat: no-repeat;
 	background-size: 43px 48px;
@@ -53,11 +54,10 @@
 	padding-top: 63px;
 	margin-bottom: 19px;
 	position: relative;
-
 }
 
 .about-us__list-item:first-child{
-	background-image: url("../images/about-us-package.svg");
+	background-image: url("../images/about-us-package-320.svg");
 }
 
 .about-us__list-item:nth-child(2){
@@ -74,7 +74,8 @@
 	width: 43px;
   height: 43px;
   background: var(--accent-color);
-  border-radius: 50%;
+	border-radius: 50%;
+	z-index: -1;
 }
 
 .about-us__list-item:nth-child(2):before {
