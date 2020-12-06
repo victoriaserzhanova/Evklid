@@ -18,7 +18,7 @@ module.exports = {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: './',
-		assetModuleFilename: 'assets/[hash][ext][query]',
+		assetModuleFilename: 'assets/[name][ext]',
 	},
 
 	module: {
@@ -46,7 +46,7 @@ module.exports = {
 				test: /\.(png|jpg|gif|svg|mp4)$/,
 				type: 'asset/resource',
 				generator: {
-					filename: 'images/[hash][ext][query]'
+					filename: 'images/[name][ext]'
 				}
 			},
 
@@ -54,7 +54,7 @@ module.exports = {
 				test: /\.(ttf|woff|woff2|eot|otf)$/,
                 type: 'asset/resource',
                 generator: {
-					filename: 'fonts/[hash][ext][query]'
+					filename: 'fonts/[name][contenthash][ext]'
 				}
 			},
 		],
@@ -62,9 +62,11 @@ module.exports = {
 
 	plugins:
 	[
-		new CleanWebpackPlugin({
+		new CleanWebpackPlugin(
+			{
 			cleanStaleWebpackAssets: false
-		}),
+		}
+		),
 
 		new HTMLWebpackPlugin({
 			template: path.resolve(__dirname, 'src/index.html'),

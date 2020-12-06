@@ -340,8 +340,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-regular"), url(./fonts/02fe757460151c5fdb84.woff2) format("woff2"),
-    url(./fonts/3996d8a7372e5ebf1021.woff) format("woff");
+  src: local("montserrat-regular"), url(./fonts/montserrat-regular02fe757460151c5fdb84.woff2) format("woff2"),
+    url(./fonts/montserrat-regular3996d8a7372e5ebf1021.woff) format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -349,8 +349,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-medium"), url(./fonts/fa8ef21670a7bb128d99.woff2) format("woff2"),
-    url(./fonts/b185b2aa6520cfaa82e8.woff) format("woff");
+  src: local("montserrat-medium"), url(./fonts/montserrat-mediumfa8ef21670a7bb128d99.woff2) format("woff2"),
+    url(./fonts/montserrat-mediumb185b2aa6520cfaa82e8.woff) format("woff");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -358,8 +358,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-semibold"), url(./fonts/12443698339658c3ebea.woff2) format("woff2"),
-    url(./fonts/083228b4677fb60dcc6e.woff) format("woff");
+  src: local("montserrat-semibold"), url(./fonts/montserrat-semibold12443698339658c3ebea.woff2) format("woff2"),
+    url(./fonts/montserrat-semibold083228b4677fb60dcc6e.woff) format("woff");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -367,8 +367,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-bold"), url(./fonts/ea4d0a3f2ce5f9750a32.woff2) format("woff2"),
-    url(./fonts/ec3ad474524f0dad7bd3.woff) format("woff");
+  src: local("montserrat-bold"), url(./fonts/montserrat-boldea4d0a3f2ce5f9750a32.woff2) format("woff2"),
+    url(./fonts/montserrat-boldec3ad474524f0dad7bd3.woff) format("woff");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -376,8 +376,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-extrabold"), url(./fonts/0b0e0ccde2c94c522ebd.woff2) format("woff2"),
-    url(./fonts/a896028c6317105629a8.woff) format("woff");
+  src: local("montserrat-extrabold"), url(./fonts/montserrat-extrabold0b0e0ccde2c94c522ebd.woff2) format("woff2"),
+    url(./fonts/montserrat-extrabolda896028c6317105629a8.woff) format("woff");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -392,6 +392,7 @@ template {
 	--light-gray-color: #ececec;
 	--gray-color: #414141;
 	--green-color: #97ee3f;
+	--hr-color: #595959;
 }
 
 
@@ -449,6 +450,7 @@ img {
 }
 
 .container {
+	width: 320px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -512,7 +514,7 @@ img {
 .hero__container {
 	padding: 33px 38px 0;
 	min-height: 262px;
-	background: url(./images/e743442193a50b4a6440.jpg);
+	background: url(./images/hero-slide-1-320.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 290px 262px;
@@ -572,10 +574,9 @@ img {
 }
 
 .about-us__col--first {
-	background: url(./images/b50782cafd79f6850e99.jpg);
+	background: url(./images/about-us-320.jpg);
 	background-repeat: no-repeat;
-	background-position: top;
-	background-size: 290px 200px;
+	background-size: contain;
 	margin-bottom: 40px;
 }
 
@@ -600,6 +601,8 @@ img {
 	color: var(--accent-color);
 }
 
+
+
 .about-us__list-item {
 	background-repeat: no-repeat;
 	background-size: 43px 48px;
@@ -607,15 +610,14 @@ img {
 	padding-top: 63px;
 	margin-bottom: 19px;
 	position: relative;
-
 }
 
 .about-us__list-item:first-child{
-	background-image: url(./images/b2806a3fb2d87211b657.svg);
+	background-image: url(./images/about-us-package-320.svg);
 }
 
 .about-us__list-item:nth-child(2){
-	background-image: url(./images/b9efeddfedba84227427.svg);
+	background-image: url(./images/about-us-settings.svg);
 	padding-top: 70px;
 }
 
@@ -628,7 +630,8 @@ img {
 	width: 43px;
   height: 43px;
   background: var(--accent-color);
-  border-radius: 50%;
+	border-radius: 50%;
+	z-index: -1;
 }
 
 .about-us__list-item:nth-child(2):before {
@@ -737,30 +740,46 @@ img {
 
 
 .questions__list-item {
+	position: relative;
 	border-top: 1px solid var(--footer-font-color);
+	padding: 18px 62px 14px 0;
+	background-image: url(./images/how-plus.svg);
+	background-repeat: no-repeat;
+	background-size: 19px 19px;
+	background-position: right 4px top 52%;
 }
 
 .questions__list-item:last-child {
 	border-bottom: 1px solid var(--footer-font-color);
 }
 
-/* .questions__list-item:not(:last-child) {
-	margin-bottom: 15px;
-
-} */
+.questions__list-item::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-repeat: no-repeat;
+	right: 0;
+	top: 38%;
+	width: 30px;
+  height: 30px;
+  background: var(--light-gray-color);
+	border-radius: 50%;
+	z-index: -1;
+}
 
 .questions__open-btn {
-	padding: 20px 62px 12px 0;
+	padding: 0;
 	background: transparent;
 	border: none;
-	font-size: 14px;
 	font-weight: 500;
 	line-height: 24px;
 	font: var(--font-color);
 	text-align: left;
-
 }
 
+.questions__btn-span {
+	color: var(--footer-font-color);
+}
 
 
 
@@ -811,19 +830,20 @@ margin-top: auto;
 }
 
 .socials__link--fb {
-	background-image: url(./images/e5af7a8c7c2a0c3b033c.svg);
+	background: url(./images/fb.svg);
 }
 
 .socials__link--vk {
-	background-image: url(./images/dfad43410d5d52824679.svg);
+	background-image: url(./images/vk.svg);
 }
 
 .socials__link--inst {
-	background-image: url(./images/d1cb55d0ef74e07d8a59.svg);
+	background-image: url(./images/instagram.svg);
 }
 
 .footer-center {
-
+	border-bottom: 1px solid var(--hr-color);
+	padding-bottom: 25px;
 }
 
 .footer-center__title {
@@ -880,15 +900,26 @@ margin-top: auto;
 	display: block
 }
 
-.footer-center__label {
+.footer-center__check {
 	display: inline-block;
 	font-size: 16px;
-	padding-left: 6px;
+	padding-left: 24px;
+	position: relative;
 }
 
 .footer-center__checkbox {
-	background: transparent;
-	border: 1px solid var(--footer-font-color);
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	left: 7px;
+	top: 7px;
+	box-shadow: 0 0 0 1px var(--footer-font-color);
+}
+
+.footer-center__check-input:checked + .footer-center__checkbox {
+	background-image: url(./images/check.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .footer-right {
