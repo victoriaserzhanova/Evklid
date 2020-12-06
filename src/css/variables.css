@@ -1,10 +1,12 @@
 :root {
 	--font-color: #333;
+	--footer-font-color: #cacaca;
 	--bg-color: #fff;
 	--bg-dark-color: #222;
 	--accent-color: #ff9900;
 	--light-gray-color: #ececec;
 	--gray-color: #414141;
 	--green-color: #97ee3f;
+	--hr-color: #595959;
 }
 
