@@ -340,8 +340,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-regular"), url(./fonts/montserrat-regular02fe757460151c5fdb84.woff2) format("woff2"),
-    url(./fonts/montserrat-regular3996d8a7372e5ebf1021.woff) format("woff");
+  src: local("montserrat-regular"), url(./fonts/montserrat-regular.woff2) format("woff2"),
+    url(./fonts/montserrat-regular.woff) format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -349,8 +349,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-medium"), url(./fonts/montserrat-mediumfa8ef21670a7bb128d99.woff2) format("woff2"),
-    url(./fonts/montserrat-mediumb185b2aa6520cfaa82e8.woff) format("woff");
+  src: local("montserrat-medium"), url(./fonts/montserrat-medium.woff2) format("woff2"),
+    url(./fonts/montserrat-medium.woff2) format("woff");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -358,8 +358,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-semibold"), url(./fonts/montserrat-semibold12443698339658c3ebea.woff2) format("woff2"),
-    url(./fonts/montserrat-semibold083228b4677fb60dcc6e.woff) format("woff");
+  src: local("montserrat-semibold"), url(./fonts/montserrat-semibold.woff2) format("woff2"),
+    url(./fonts/montserrat-semibold.woff) format("woff");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -367,8 +367,8 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-bold"), url(./fonts/montserrat-boldea4d0a3f2ce5f9750a32.woff2) format("woff2"),
-    url(./fonts/montserrat-boldec3ad474524f0dad7bd3.woff) format("woff");
+  src: local("montserrat-bold"), url(./fonts/montserrat-bold.woff2) format("woff2"),
+    url(./fonts/montserrat-bold.woff) format("woff");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -376,18 +376,18 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: local("montserrat-extrabold"), url(./fonts/montserrat-extrabold0b0e0ccde2c94c522ebd.woff2) format("woff2"),
-    url(./fonts/montserrat-extrabolda896028c6317105629a8.woff) format("woff");
+  src: local("montserrat-extrabold"), url(./fonts/montserrat-extrabold.woff2) format("woff2"),
+    url(./fonts/montserrat-extrabold.woff) format("woff");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
 }
 
 :root {
-	--font-color: #333;
+	--font-color: #333333;
 	--footer-font-color: #cacaca;
-	--bg-color: #fff;
-	--bg-dark-color: #222;
+	--bg-color: #ffffff;
+	--bg-dark-color: #222222;
 	--accent-color: #ff9900;
 	--light-gray-color: #ececec;
 	--gray-color: #414141;
@@ -601,8 +601,6 @@ img {
 	color: var(--accent-color);
 }
 
-
-
 .about-us__list-item {
 	background-repeat: no-repeat;
 	background-size: 43px 48px;
@@ -728,7 +726,7 @@ img {
 }
 
 .questions {
-	padding-bottom: 42px;
+	padding-bottom: 39px;
 }
 
 .questions__title {
@@ -738,15 +736,9 @@ img {
 	margin: 0 0 12px;
 }
 
-
 .questions__list-item {
 	position: relative;
 	border-top: 1px solid var(--footer-font-color);
-	padding: 18px 62px 14px 0;
-	background-image: url(./images/how-plus.svg);
-	background-repeat: no-repeat;
-	background-size: 19px 19px;
-	background-position: right 4px top 52%;
 }
 
 .questions__list-item:last-child {
@@ -758,23 +750,39 @@ img {
 	position: absolute;
 	display: block;
 	background-repeat: no-repeat;
-	right: 0;
-	top: 38%;
-	width: 30px;
-  height: 30px;
-  background: var(--light-gray-color);
-	border-radius: 50%;
-	z-index: -1;
+	background-image: url(./images/how-plus.svg);
+	background-repeat: no-repeat;
+	width: 19px;
+	height: 19px;
+	top: 41%;
+	right: 4px;
 }
 
 .questions__open-btn {
-	padding: 0;
+	line-height: 24px;
+	padding: 21px 61px 22px 0;
 	background: transparent;
 	border: none;
 	font-weight: 500;
-	line-height: 24px;
-	font: var(--font-color);
+	color: var(--font-color);
 	text-align: left;
+}
+
+.questions__open-btn--second {
+	padding-right: 64px;
+}
+
+.questions__open-btn:after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: var(--light-gray-color);
+	right: 0;
+	top: 36%;
+	width: 30px;
+  height: 30px;
+	border-radius: 50%;
+	z-index: -1;
 }
 
 .questions__btn-span {
