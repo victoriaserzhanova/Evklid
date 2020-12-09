@@ -5,9 +5,8 @@
 		padding: 0;
 	}
 
-	.header {
-		min-height: 69px;
-		padding: 10px 0;
+	.header__container {
+		min-height: 67px;
 	}
 
 	.header__logo {
@@ -19,18 +18,312 @@
 
 	.header__search {
 		display: block;
+		margin-right: -19px;
+		padding: 0;
 		order: 3;
-		background: transparent;
 		background-image: url("../images/search.svg");
-		width: 24px;
-		height: 26px;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-position: center center;
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
 		border: none;
 	}
 
 	.header__burger {
 		order: 1;
-		height: 45px;
-		width: 33px;
+		height: 46px;
+		width: 46px;
+		margin-left: -9px;
+	}
+
+/* HERO */
+
+	.hero {
+		background-image: url("../images/hero-slide-1-768.jpg");
+		background-size: 768px 771px;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding-top: 194px;
+		padding-bottom: 115px;
+	}
+
+	.hero__container {
+		background-image: none;
+
+	}
+
+	.hero__title {
+		font-size: 60px;
+		line-height: 73px;
+		text-align: left;
+		min-width: 721px;
+	}
+
+	.hero__descr {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: left;
+		margin-bottom: 110px;
+	}
+
+	.hero__btn {
+		font-size: 24px;
+		min-height: 80px;
+		min-width: 287px;
+		padding: 0 10px;
+		margin: 0;
+	}
+
+/* ABOUT-US */
+	.about-us {
+		padding-top: 67px;
+		padding-bottom: 27px;
+	}
+
+	.about-us__title {
+		font-size: 48px;
+		margin-bottom: 28px;
+	}
+
+	.about-us__descr {
+		font-size: 16px;
+		line-height: 32px;
+		margin-bottom: 59px;
+	}
+
+	.about-us__col--first {
+		background: url("../images/about-us-768.jpg");
+		background-size: cover;
+	}
+
+	.about-us__content {
+		position: relative;
+		padding-top: 501px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 25px;
+		color: var(--bg-color);
+		display: flex;
+		align-items: center;
+	}
+
+	.about-us__content::before {
+		content: "";
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 100%;
+		height: 173px;
+		left: 0;
+
+	}
+
+	.about-us__text {
+		font-weight: 700;
+		padding-right: 40px;
+		font-size: 16px;
+		line-height: 31px;
+		margin: 0;
+		position: relative;
+	}
+
+	.about-us__link {
+		position: relative;
+		font-size: 16px;
+		padding: 20px 34px;
+		color: var(--bg-color);
+		border: 3px solid var(--accent-color);
+	}
+
+	.about-us__list-item {
+		background-size: 104px 104px;
+		background-position: center left 57px;
+		margin-bottom: 40px;
+		padding: 37px 37px 36px 177px;
+		border: 1px solid var(--footer-font-color);
+	}
+
+	.about-us__list-item:first-child{
+		background-image: url("../images/package-768.svg");
+	}
+
+	.about-us__list-item:nth-child(2){
+		background-image: url("../images/settings-768.svg");
+		background-size: 87px 86px;
+		padding-top: 37px;
+		background-position: top 66px left 65px;
+	}
+
+	.about-us__list-item::before {
+		top: 84px;
+    left: 32px;
+    width: 79px;
+    height: 79px;
+	}
+
+	.about-us__list-item:nth-child(2):before {
+		top: 88px;
+		left: 30px;
+	}
+
+	.about-us__item-span {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+
+	.about-us__item-text {
+		margin: 0;
+		font-size: 16px;
+		line-height: 32px;
+	}
+
+/* HOW */
+	.how {
+		padding-bottom: 68px;
+	}
+
+	.how__title {
+		font-size: 48px;
+		margin: 0 0 49px;
+	}
+
+	.how__tab-list {
+		margin-bottom: 41px;
+	}
+
+	.how__tab-link {
+		font-size: 18px;
+	}
+
+	.how__img {
+		height: 284px;
+		margin-bottom: 34px;
+	}
+
+	.how__tab-heading {
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	.how__tab-descr {
+		margin: 0 0 29px;
+		font-size: 16px;
+		line-height: 32px;
+	}
+
+	.how__details-link {
+		min-width: 175px;
+		font-size: 16px;
+		padding: 21px 10px;
+		margin-right: 31px;
+	}
+
+	.how__contract-link {
+		min-width: 147px;
+		font-size: 16px;
+		padding: 21px 10px;
+	}
+
+/* QUESTIONS */
+	.questions {
+		padding-bottom: 52px;
+	}
+
+	.questions__title {
+		font-size: 48px;
+		line-height: 1;
+		margin: 0 0 39px;
+		letter-spacing: -1px;
+	}
+
+	.questions__list-item::after {
+		right: 0;
+		top: 37%;
+		width: 50px;
+		height: 50px;
+		background-image: url("../images/how-plus.svg");
+		background-size: 42px 37px;
+	}
+
+	.questions__open-btn {
+		line-height: 32px;
+		font-size: 20px;
+		padding: 29px 157px 23px 0;
+		font-weight: 700;
+	}
+
+	.questions__open-btn--second {
+		padding-right: 157px;
+	}
+
+	.questions__open-btn--third {
+		padding-right: 196px;
+	}
+
+/* FOOTER */
+
+	.footer__container {
+		padding-top: 67px;
+		padding-bottom: 50px;
+	}
+
+	.footer-center {
+		align-self: flex-start;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.footer-center__title {
+		font-size: 48px;
+	}
+
+	.footer-center__form {
+		width: 534px;
+	}
+
+	.footer-center__input {
+		padding-left: 24px;
+		margin-bottom: 25px;
+	}
+
+	.footer-center__input::placeholder {
+		font-size: 16px;
+	}
+
+
+	.footer-center__props {
+		display: flex;
+		align-items: center;
+	}
+
+	.footer-center__btn {
+		font-size: 16px;
+		min-height: 60px;
+		min-width: 241px;
+		margin: 0 10px 0 0;
+	}
+
+	.footer-left {
+		margin-top: 55px;
+		align-self: flex-start;
+		}
+
+	.footer__logo {
+		width: 224px;
+		height: 72px;
+		margin-bottom: 8px;
+	}
+
+	.socials__link {
+		width: 60px;
+		height: 60px;
+	}
+
+	.socials__item:not(:last-child) {
+		margin-right: 25px;
 	}
 }
 

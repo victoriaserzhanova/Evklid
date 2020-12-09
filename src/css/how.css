@@ -30,11 +30,10 @@
 }
 
 .how__tab-heading {
-	margin: 0;
+	margin: 0 0 6px;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1;
-	margin-bottom: 6px;
 }
 
 .how__tab-descr {
@@ -43,12 +42,11 @@
 
 .how__tab-props {
 	display: flex;
-	justify-content: space-between;
 }
 
 .how__details-link {
 	display: inline-block;
-	min-height: 40px;
+	margin-right: auto;
 	min-width: 162px;
 	font-size: 12px;
 	font-weight: 700;
@@ -63,7 +61,6 @@
 
 .how__contract-link {
 	display: inline-block;
-	min-height: 40px;
 	min-width: 118px;
 	font-size: 12px;
 	font-weight: 400;

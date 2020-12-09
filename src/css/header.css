@@ -1,10 +1,7 @@
-.header {
-	min-height: 45px;
-}
-
 .header__container {
 	display: flex;
 	align-items: center;
+	min-height: 45px;
 }
 
 .header__logo {

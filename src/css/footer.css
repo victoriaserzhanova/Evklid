@@ -45,7 +45,7 @@ margin-top: auto;
 }
 
 .socials__link--fb {
-	background: url('../images/fb.svg');
+	background-image: url('../images/fb.svg');
 }
 
 .socials__link--vk {
@@ -80,6 +80,7 @@ margin-top: auto;
 	color: var(--footer-font-color);
 	padding-left: 20px;
 	padding-right: 20px;
+	padding-top: 12px;
 	border: none;
 	margin-bottom: 25px;
 }
