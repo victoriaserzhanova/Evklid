@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+	.container {
+		width: 668px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.header {
+		min-height: 69px;
+		padding: 10px 0;
+	}
+
+	.header__logo {
+		order: 2;
+		width: 150px;
+		height: 47px;
+		margin: auto;
+	}
+
+	.header__search {
+		display: block;
+		order: 3;
+		background: transparent;
+		background-image: url("../images/search.svg");
+		width: 24px;
+		height: 26px;
+		border: none;
+	}
+
+	.header__burger {
+		order: 1;
+		height: 45px;
+		width: 33px;
+	}
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+

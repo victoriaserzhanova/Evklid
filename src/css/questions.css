@@ -22,13 +22,15 @@
 	content: "";
 	position: absolute;
 	display: block;
-	background-repeat: no-repeat;
+	background: var(--light-gray-color);
+	right: 0;
+	top: 37%;
+	width: 30px;
+  height: 30px;
+	border-radius: 50%;
 	background-image: url("../images/how-plus.svg");
 	background-repeat: no-repeat;
-	width: 19px;
-	height: 19px;
-	top: 41%;
-	right: 4px;
+	background-position: top 5px right 5px;
 }
 
 .questions__open-btn {
@@ -43,19 +45,6 @@
 
 .questions__open-btn--second {
 	padding-right: 64px;
-}
-
-.questions__open-btn:after {
-	content: "";
-	position: absolute;
-	display: block;
-	background: var(--light-gray-color);
-	right: 0;
-	top: 36%;
-	width: 30px;
-  height: 30px;
-	border-radius: 50%;
-	z-index: -1;
 }
 
 .questions__btn-span {
