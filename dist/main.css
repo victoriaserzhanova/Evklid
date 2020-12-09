@@ -973,14 +973,13 @@ margin-top: auto;
 
 	.hero__container {
 		background-image: none;
-
 	}
 
 	.hero__title {
 		font-size: 60px;
 		line-height: 73px;
 		text-align: left;
-		min-width: 721px;
+		min-width: 697px;
 	}
 
 	.hero__descr {
