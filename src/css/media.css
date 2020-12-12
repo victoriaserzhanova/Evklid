@@ -6,7 +6,7 @@
 	}
 
 	.header__container {
-		min-height: 67px;
+		min-height: 69px;
 	}
 
 	.header__logo {
@@ -46,7 +46,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		padding-top: 194px;
-		padding-bottom: 115px;
+		padding-bottom: 114px;
 	}
 
 	.hero__container {
@@ -229,7 +229,7 @@
 
 /* QUESTIONS */
 	.questions {
-		padding-bottom: 52px;
+		padding-bottom: 54px;
 	}
 
 	.questions__title {
@@ -251,7 +251,7 @@
 	.questions__open-btn {
 		line-height: 32px;
 		font-size: 20px;
-		padding: 29px 157px 23px 0;
+		padding: 25px 157px 27px 0;
 		font-weight: 700;
 	}
 
@@ -286,14 +286,16 @@
 
 	.footer-center__input {
 		padding-left: 24px;
-		margin-bottom: 25px;
+		margin-bottom: 24px;
 	}
 
 	.footer-center__input::placeholder {
 		font-size: 16px;
 	}
 
-
+	.textarea {
+		padding-top: 25px;
+	}
 	.footer-center__props {
 		display: flex;
 		align-items: center;
