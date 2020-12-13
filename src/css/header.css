@@ -5,9 +5,9 @@
 }
 
 .header__logo {
+	display: block;
 	width: 97px;
 	height: 31px;
-	margin-right: auto;
 }
 
 .header__menu {
@@ -26,6 +26,7 @@
 	padding: 0;
 	height: 45px;
 	width: 39px;
+	margin-left: auto;
 }
 
 .line {

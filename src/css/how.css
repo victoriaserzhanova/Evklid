@@ -24,9 +24,9 @@
 }
 
 .how__img {
-	display: inline-block;
+	display: block;
 	height: 160px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 .how__tab-heading {

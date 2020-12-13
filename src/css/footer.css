@@ -27,8 +27,8 @@ margin-top: auto;
 .footer__logo {
 	width: 131px;
 	height: 42px;
-	margin-bottom: 6px;
-	display: inline-block;
+	margin-bottom: 16px;
+	display: block;
 }
 
 .socials__link {
@@ -80,9 +80,8 @@ margin-top: auto;
 	color: var(--footer-font-color);
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-top: 12px;
-	border: none;
 	margin-bottom: 25px;
+	border: none;
 }
 
 .textarea {

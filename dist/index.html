@@ -13,7 +13,23 @@
 <body>
 <header class="header">
 	<div class="container header__container">
-		<img src="./images/logo-320.png" alt="Логотип проектных систем Евклид" class="header__logo logo">
+		<picture>
+			<source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/224x72.webp?text=224x72+webP+2x 2x">
+
+			<source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/150x48.webp?text=150x48+webP+1x, https://via.placeholder.com/150x48.webp?text=150x48+webP+2x 2x">
+
+			<source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x, https://via.placeholder.com/150x47.webp?text=150x47+webP+2x 2x">
+
+			<source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x, https://via.placeholder.com/97x31.webp?text=97x31+webP+2x 2x">
+
+			<source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/224x72.png?text=224x72+png+2x 2x">
+
+			<source media="(min-width: 1024px)" srcset="https://via.placeholder.com/150x48.png?text=150x48+png+1x, https://via.placeholder.com/150x48.png?text=150x48+png+2x 2x">
+
+			<source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x, https://via.placeholder.com/150x47.png?text=150x47+png+2x 2x">
+
+			<img class="header__logo logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/97x31.png?text=97x31+png+2x 2x" alt="Логотип проектных систем Евклид">
+		</picture>
 
 		<nav class="header__menu menu">
 			<ul class="menu__list list-reset">
@@ -120,7 +136,7 @@
 			</ul>
 
 			<ol class="how__tab-content list-reset">
-				<li>
+				<li class="how__tab-list-item">
 					<picture>
 						<source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x, https://via.placeholder.com/870x465.webp?text=870x465+webP+2x 2x">
 
@@ -187,10 +203,26 @@
 <footer class="footer">
 	<div class="container footer__container">
 		<div class="footer-left footer__column">
-			<img src="./images/logo-footer.png" class="footer__logo logo" alt="Логотип проектных систем Евклид">
+			<picture>
+				<source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/224x72.webp?text=224x72+webP+2x 2x">
+
+				<source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/224x72.webp?text=224x72+webP+2x 2x">
+
+				<source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/224x72.webp?text=224x72+webP+2x 2x">
+
+				<source type="image/webp" srcset="https://via.placeholder.com/131x42.webp?text=131x42+webP+1x, https://via.placeholder.com/131x42.webp?text=131x42+webP+2x 2x">
+
+				<source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/224x72.png?text=224x72+png+2x 2x">
+
+				<source media="(min-width: 1024px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/224x72.png?text=224x72+png+2x 2x">
+
+				<source media="(min-width: 768px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/224x72.png?text=224x72+png+2x 2x">
+
+				<img class="footer__logo logo" src="https://via.placeholder.com/131x42.png?text=131x42+png+1x" srcset="https://via.placeholder.com/131x42.png?text=131x42+png+2x 2x" alt="Логотип проектных систем Евклид">
+			</picture>
 
 			<nav class="footer__menu menu">
-				<ul class="footer__list">
+				<ul class="footer__list list-reset">
 					<li class="footer__list-item">
 						<a href="#" class="footer__menu-link">О нас</a>
 					</li>
