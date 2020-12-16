@@ -22,15 +22,15 @@
 	content: "";
 	position: absolute;
 	display: block;
-	background: var(--light-gray-color);
+	background-color: var(--light-gray-color);
 	right: 0;
 	top: 37%;
 	width: 30px;
   height: 30px;
 	border-radius: 50%;
-	background-image: url("../images/how-plus.svg");
+	background-image: url("../images/320/how-plus.svg");
 	background-repeat: no-repeat;
-	background-position: top 5px right 5px;
+	background-position: center;
 }
 
 .questions__open-btn {

@@ -8,6 +8,7 @@
 	display: block;
 	width: 97px;
 	height: 31px;
+	overflow: hidden;
 }
 
 .header__menu {

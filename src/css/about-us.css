@@ -1,6 +1,5 @@
 .about-us {
-	padding-top: 20px;
-	padding-bottom: 31px;
+	padding-bottom: 50px;
 }
 
 .about-us__title {
@@ -17,15 +16,12 @@
 	margin-bottom: 10px;
 }
 
-.about-us__col--first {
-	background: url("../images/about-us-320.jpg");
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-bottom: 40px;
-}
-
 .about-us__content {
+	background-image: url("../images/320/about-us-320.jpg");
+	background-repeat: no-repeat;
+	margin-bottom: 40px;
 	padding-top: 210px;
+	overflow: hidden;
 }
 
 .about-us__text {
@@ -37,7 +33,10 @@
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 1;
-	padding: 12px 42px;
+	min-width: 162px;
+	min-height: 40px;
+	padding: 12px 10px;
+	text-align: center;
 	background-color: transparent;
 	border: 2px solid var(--accent-color);
 	cursor: pointer;
@@ -46,37 +45,33 @@
 
 .about-us__list-item {
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: 43px 48px;
 	background-position: left 21px top 0;
 	padding-top: 63px;
-	margin-bottom: 19px;
 	position: relative;
 }
 
 .about-us__list-item:first-child{
-	background-image: url("../images/about-us-package-320.svg");
+	background-image: url("../images/320/about-us-package.svg");
+	margin-bottom: 26px;
 }
 
 .about-us__list-item:nth-child(2){
-	background-image: url("../images/about-us-settings.svg");
-	padding-top: 70px;
+	background-image: url("../images/320/about-us-settings.svg");
 }
 
 .about-us__list-item::before {
 	content: "";
 	display: block;
 	position: absolute;
-	background-repeat: no-repeat;
 	top: 6px;
 	width: 43px;
   height: 43px;
-  background: var(--accent-color);
+	background-color: var(--accent-color);
+	background-repeat: no-repeat;
 	border-radius: 50%;
 	z-index: -1;
-}
-
-.about-us__list-item:nth-child(2):before {
-	top: 13px;
 }
 
 .about-us__item-span {
