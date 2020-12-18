@@ -25,11 +25,11 @@
 
 .how__image-wrapper {
 	margin-bottom: 15px;
+	height: 160px;
 }
 
 .how__img {
 	display: block;
-	height: 160px;
 	overflow: hidden;
 }
 

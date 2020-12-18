@@ -24,11 +24,11 @@
 
 .footer-left__logo-wrapper {
 	margin-bottom: 5px;
+	width: 131px;
+	height: 42px;
 }
 
 .footer__logo {
-	width: 131px;
-	height: 42px;
 	display: block;
 	overflow: hidden;
 }
