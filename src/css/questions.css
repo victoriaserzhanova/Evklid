@@ -2,9 +2,13 @@
 	padding-bottom: 39px;
 }
 
-.questions__title {
+.section-title {
 	font-size: 24px;
 	font-weight: 400;
+	line-height: 1;
+}
+
+.questions__title {
 	line-height: 29px;
 	margin: 0 0 12px;
 }
@@ -22,13 +26,15 @@
 	content: "";
 	position: absolute;
 	display: block;
+	background-color: var(--light-gray-color);
+	right: 0;
+	top: 37%;
+	width: 30px;
+  height: 30px;
+	border-radius: 50%;
+	background-image: url("../images/320/how-plus.svg");
 	background-repeat: no-repeat;
-	background-image: url("../images/how-plus.svg");
-	background-repeat: no-repeat;
-	width: 19px;
-	height: 19px;
-	top: 41%;
-	right: 4px;
+	background-position: center;
 }
 
 .questions__open-btn {
@@ -43,19 +49,6 @@
 
 .questions__open-btn--second {
 	padding-right: 64px;
-}
-
-.questions__open-btn:after {
-	content: "";
-	position: absolute;
-	display: block;
-	background: var(--light-gray-color);
-	right: 0;
-	top: 36%;
-	width: 30px;
-  height: 30px;
-	border-radius: 50%;
-	z-index: -1;
 }
 
 .questions__btn-span {

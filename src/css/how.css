@@ -2,10 +2,13 @@
 	padding-bottom: 41px;
 }
 
-.how__title {
+.section-title {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 1;
+}
+
+.how__title {
 	margin: 0 0 31px;
 }
 
@@ -13,9 +16,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
+	flex-wrap: wrap;
 }
 
-.how__tab-link {
+.how__tab-btn {
 	display: inline-block;
 	min-height: 100%;
 	border: none;
@@ -23,18 +27,20 @@
 	padding:0;
 }
 
+.how__image-wrapper {
+	margin-bottom: 15px;
+}
+
 .how__img {
-	display: inline-block;
-	height: 160px;
-	margin-bottom: 5px;
+	display: block;
+	overflow: hidden;
 }
 
 .how__tab-heading {
-	margin: 0;
+	margin: 0 0 6px;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1;
-	margin-bottom: 6px;
 }
 
 .how__tab-descr {
@@ -43,13 +49,13 @@
 
 .how__tab-props {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 .how__details-link {
 	display: inline-block;
-	min-height: 40px;
-	min-width: 162px;
+	flex: 0 1 162px;
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 1;
@@ -63,8 +69,7 @@
 
 .how__contract-link {
 	display: inline-block;
-	min-height: 40px;
-	min-width: 118px;
+	flex: 0 1 118px;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1;
