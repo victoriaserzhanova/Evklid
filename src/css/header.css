@@ -4,17 +4,13 @@
 	min-height: 45px;
 }
 
-.header__logo-wrapper {
-	width: 97px;
-	height: 31px;
-}
 
 .header__logo {
 	display: block;
 	overflow: hidden;
 }
 
-.header__menu {
+.header__nav {
 	display: none;
 }
 
