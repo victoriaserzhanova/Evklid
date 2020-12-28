@@ -1,0 +1,28 @@
+.socials {
+	display: flex;
+}
+
+.socials__item {
+	min-height: 56px;
+}
+
+.socials__link {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 35px 35px;
+	width: 49px;
+	height: 100%;
+}
+
+.socials__link--fb {
+	background-image: url('../images/320/fb.svg');
+}
+
+.socials__link--vk {
+	background-image: url('../images/320/vk.svg');
+}
+
+.socials__link--inst {
+	background-image: url('../images/320/instagram.svg');
+}

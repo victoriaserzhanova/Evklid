@@ -3,15 +3,26 @@
 }
 
 .hero__container {
+	position: relative;
 	min-height: 262px;
 	padding-top: 33px;
 	padding-bottom: 16px;
 	background-image: url("../images/320/hero-slide-1-320.jpg");
-	
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 290px;
 	color: var(--bg-color);
+}
+
+.hero__container::after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 290px;
+	top: 0;
+	z-index: -1;
+	background-color: var(--font-color);
 }
 
 .hero__title {
@@ -30,19 +41,6 @@
 	margin: 0 auto;
 	text-align: center;
 	margin-bottom: 34px;
-}
-
-.btn {
-	display: block;
-	padding: 10px 10px;
-	line-height: 1;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	background-color: var(--accent-color);
-	color: var(--bg-color);
-	font-weight: 700;
-	font-size: 12px;
 }
 
 .hero__btn {

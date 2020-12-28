@@ -1,0 +1,14 @@
+.tabs {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+}
+
+.tabs__btn {
+	display: inline-block;
+	min-height: 100%;
+	border: none;
+	background: transparent;
+	padding:0;
+}

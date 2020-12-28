@@ -2,6 +2,11 @@
 @import 'fonts.css';
 @import 'variables.css';
 @import 'styles.css';
+@import 'section-title.css';
+@import 'btn.css';
+@import 'socials.css';
+@import 'nav.css';
+@import 'tabs.css';
 @import 'header.css';
 @import 'hero.css';
 @import 'about-us.css';
