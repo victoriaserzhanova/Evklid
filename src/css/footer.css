@@ -32,12 +32,12 @@
 	overflow: hidden;
 }
 
-.footer-request {
+.request {
 	border-bottom: 1px solid var(--hr-color);
 	padding-bottom: 25px;
 }
 
-.footer-request__title {
+.request__title {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 1;
@@ -45,11 +45,11 @@
 	margin-bottom: 22px;
 }
 
-.footer-request__form {
+.request__form {
 	width: 100%;
 }
 
-.footer-request__input {
+.request__input {
 	min-height: 60px;
 	width: 100%;
 	background-color: var(--gray-color);
@@ -67,28 +67,28 @@
 	margin-bottom: 15px;
 }
 
-.footer-request__input::placeholder {
+.request__input::placeholder {
 	color: var(--footer-font-color);
 }
 
-.footer-request__props {
+.request__props {
 	width: 100%;
 }
 
-.footer-request__btn {
+.request__btn {
 	margin: 0 auto 14px;
 	min-height: 40px;
 	min-width: 180px;
 }
 
-.footer-request__check {
+.request__check {
 	display: inline-block;
 	font-size: 16px;
 	padding-left: 24px;
 	position: relative;
 }
 
-.footer-request__checkbox {
+.request__checkbox {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -97,7 +97,7 @@
 	box-shadow: 0 0 0 1px var(--footer-font-color);
 }
 
-.footer-request__check-input:checked + .footer-request__checkbox {
+.request__check-input:checked + .request__checkbox {
 	background-image: url("../images/320/check.svg");
 	background-repeat: no-repeat;
 	background-position: center;
