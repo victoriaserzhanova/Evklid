@@ -1,0 +1,13 @@
+
+.btn {
+  display: block;
+  padding: 10px 10px;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-weight: 700;
+  font-size: 12px;
+}

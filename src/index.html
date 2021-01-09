@@ -34,7 +34,7 @@
 			</picture>
 		</div>
 
-		<nav class="header__nav">
+		<nav class="header__nav nav">
 			<ul class="nav__list list-reset ">
 				<li class="nav__list-item ">
 					<a href="#" class="nav__link">О нас</a>
@@ -88,10 +88,12 @@
 					 Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
 			</p>
 
-			<div class="about-us__content">
-				<p class="about-us__text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
+			<div class="about-us__wrapper">
+				<div class="about-us__content">
+					<p class="about-us__text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
 
-				<a class="about-us__link">Подробнее</a>
+					<a class="about-us__link">Подробнее</a>
+				</div>
 			</div>
 
 			<ul class="about-us__list list-reset">
@@ -119,23 +121,23 @@
 		<div class="container how__container">
 			<h2 class="how__title section-title">Как мы работаем</h2>
 
-			<ul class="how__tab-list list-reset ">
-				<li class="how__tab-list-item">
-					<button type="button" class="how__tab-btn">1 шаг</button>
+			<ul class="how__tabs tabs list-reset ">
+				<li class="tabs__item">
+					<button type="button" class="tabs__btn">1 шаг</button>
 				</li>
-				<li class="how__tab-list-item">
-					<button type="button" class="how__tab-btn">2 шаг</button>
+				<li class="tabs__item">
+					<button type="button" class="tabs__btn">2 шаг</button>
 				</li>
-				<li class="how__tab-list-item">
-					<button type="button" class="how__tab-btn">3 шаг</button>
+				<li class="tabs__item">
+					<button type="button" class="tabs__btn">3 шаг</button>
 				</li>
-				<li class="how__tab-list-item">
-					<button type="button" class="how__tab-btn">4 шаг</button>
+				<li class="tabs__item">
+					<button type="button" class="tabs__btn">4 шаг</button>
 				</li>
 			</ul>
 
-			<ol class="how__tab-content list-reset ">
-				<li class="how__tab-list-item">
+			<ol class="how__content list-reset ">
+				<li class="how__item">
 					<div class="how__image-wrapper">
 						<picture>
 							<source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
@@ -164,9 +166,9 @@
 					</div>
 
 					<div class="how__content-wrapper">
-						<h3 class="how__tab-heading">Проводим консультацию</h3>
+						<h3 class="how__heading">Проводим консультацию</h3>
 
-						<p class="how__tab-descr">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
+						<p class="how__descr">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
 							 В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
 							 инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно
 								образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
@@ -174,7 +176,7 @@
 								особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
 						</p>
 
-						<div class="how__tab-props">
+						<div class="how__props">
 							<a href="#" class="how__details-link">Подробнее</a>
 
 							<a href="#" class="how__contract-link" download>Договор</a>
@@ -267,23 +269,23 @@
 			</ul>
 		</div>
 
-		<div class="footer-request">
-			<h2 class="footer-request__title">Оставить заявку</h2>
+		<div class="footer-request request">
+			<h2 class="request__title">Оставить заявку</h2>
 
-			<form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="footer-request__form">
-				<input type="text" name="userName" class="footer-request__input" required placeholder="Фамилия, имя и отчество*">
+			<form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="request__form">
+				<input type="text" name="userName" class="request__input" required placeholder="Фамилия, имя и отчество*">
 
-				<input type="email" name="email" class="footer-request__input" required placeholder="E-mail*">
+				<input type="email" name="email" class="request__input" required placeholder="E-mail*">
 
-				<textarea name="message" rows="7" class="footer-request__input textarea" placeholder="Сообщение"></textarea>
+				<textarea name="message" rows="7" class="request__input textarea" placeholder="Сообщение"></textarea>
 
-				<div class="footer-request__props">
-					<button type="submit" class="footer-request__btn btn">Отправить данные</button>
+				<div class="request__props">
+					<button type="submit" class="request__btn btn">Отправить данные</button>
 
-					<label class="footer-request__check">
-						<input class="footer-request__check-input visually-hidden " type="checkbox" name="personalData" value="agree" required checked>
+					<label class="request__check">
+						<input class="request__check-input visually-hidden " type="checkbox" name="personalData" value="agree" required checked>
 
-						<span class="footer-request__checkbox">
+						<span class="request__checkbox">
 						</span>
 						Согласен на обработку данных
 					</label>

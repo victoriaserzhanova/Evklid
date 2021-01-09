@@ -1,151 +1,108 @@
 .footer {
-	background-color: var(--bg-dark-color);
-	color: var(--footer-font-color);
-	padding-top: 43px;
-	padding-bottom: 14px;
+  padding-top: 43px;
+  padding-bottom: 14px;
+  color: var(--footer-font-color);
+  background-color: var(--bg-dark-color);
 }
 
 .footer__container {
-	min-height: 626px;
-	display: flex;
-	flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 626px;
 }
 
 .footer-left {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
 }
 
 .footer__menu {
-	display: none;
+  display: none;
 }
 
 .footer-left__logo-wrapper {
-	margin-bottom: 5px;
-
+  margin-bottom: 5px;
 }
 
 .footer__logo {
-	display: block;
-	overflow: hidden;
+  display: block;
+  overflow: hidden;
 }
 
-.socials {
-	display: flex;
+.request {
+  border-bottom: 1px solid var(--hr-color);
+  padding-bottom: 25px;
 }
 
-.socials__item {
-	min-height: 56px;
+.request__title {
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
 }
 
-.socials__link {
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 35px 35px;
-	width: 49px;
-	height: 100%;
+.request__form {
+  width: 100%;
 }
 
-.socials__link--fb {
-	background-image: url('../images/320/fb.svg');
-}
-
-.socials__link--vk {
-	background-image: url('../images/320/vk.svg');
-}
-
-.socials__link--inst {
-	background-image: url('../images/320/instagram.svg');
-}
-
-.footer-request {
-	border-bottom: 1px solid var(--hr-color);
-	padding-bottom: 25px;
-}
-
-.footer-request__title {
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 1;
-	margin: 0;
-	margin-bottom: 22px;
-}
-
-.footer-request__form {
-	width: 100%;
-}
-
-.footer-request__input {
-	min-height: 60px;
-	width: 100%;
-	background-color: var(--gray-color);
-	color: var(--footer-font-color);
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-bottom: 25px;
-	border: none;
+.request__input {
+  min-height: 60px;
+  width: 100%;
+  background-color: var(--gray-color);
+  color: var(--footer-font-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 25px;
+  border: none;
 }
 
 .textarea {
-	resize: none;
-	padding-top: 22px;
-	padding-bottom: 16px;
-	margin-bottom: 15px;
+  resize: none;
+  padding-top: 22px;
+  padding-bottom: 16px;
+  margin-bottom: 15px;
 }
 
-.footer-request__input::placeholder {
-	color: var(--footer-font-color);
+.request__input::placeholder {
+  color: var(--footer-font-color);
 }
 
-.footer-request__props {
-	width: 100%;
+.request__props {
+  width: 100%;
 }
 
-.btn {
-	display: block;
-	padding: 10px 10px;
-	line-height: 1;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	background-color: var(--accent-color);
-	color: var(--bg-color);
-	font-weight: 700;
-	font-size: 12px;
+.request__btn {
+  margin: 0 auto 14px;
+  min-height: 40px;
+  min-width: 180px;
 }
 
-.footer-request__btn {
-	margin: 0 auto 14px;
-	min-height: 40px;
-	min-width: 180px;
+.request__check {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 24px;
+  position: relative;
 }
 
-.footer-request__check {
-	display: inline-block;
-	font-size: 16px;
-	padding-left: 24px;
-	position: relative;
+.request__checkbox {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 7px;
+  top: 7px;
+  box-shadow: 0 0 0 1px var(--footer-font-color);
 }
 
-.footer-request__checkbox {
-	position: absolute;
-	width: 12px;
-	height: 12px;
-	left: 7px;
-	top: 7px;
-	box-shadow: 0 0 0 1px var(--footer-font-color);
-}
-
-.footer-request__check-input:checked + .footer-request__checkbox {
-	background-image: url("../images/320/check.svg");
-	background-repeat: no-repeat;
-	background-position: center;
+.request__check-input:checked + .request__checkbox {
+  background-image: url("../images/320/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-text {
-	display: none;
+  display: none;
 }
 
