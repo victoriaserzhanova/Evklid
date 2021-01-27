@@ -1,9 +1,18 @@
 .hero__container {
+  position: relative;
   color: var(--bg-color);
 }
 
+.hero__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 15px;
+}
+
 .hero__slide {
-  min-height: 262px;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,9 +38,12 @@
 
 .hero__content {
   padding: 33px 24px;
+  min-height: 262px;
 }
 
 .hero__title {
+  position: relative;
+  z-index: 50;
   font-size: 20px;
   font-weight: 800;
   line-height: 24px;
@@ -40,6 +52,8 @@
 }
 
 .hero__descr {
+  position: relative;
+  z-index: 50;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
