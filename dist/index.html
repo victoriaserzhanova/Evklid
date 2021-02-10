@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Евклид проектные системы</title>
   <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font">
   <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font">
@@ -16,34 +16,29 @@
     $( "#accordion" ).accordion();
   } );
   </script>
-</head>
+<link href="./main.css" rel="stylesheet"></head>
 <body>
 <header class="header">
   <div class="container header__container">
     <div class="header__logo-wrapper">
       <picture>
-        <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
-        https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
+        <source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
 
-        <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x 1x,
-        https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
+        <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x, https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
 
-        <source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x 1x,
-        https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
+        <source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x, https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
 
-        <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
-        https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
+        <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
 
-        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x 1x,
-        https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
+        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x, https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
 
         <img class="header__logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/194x62.png?text=194x62+png+2x 2x" alt="Логотип проектных систем Евклид">
       </picture>
     </div>
 
     <nav class="header__nav nav">
-      <ul class="nav__list list-reset ">
-        <li class="nav__list-item ">
+      <ul class="nav__list list-reset">
+        <li class="nav__list-item">
           <a href="#" class="nav__link">О нас</a>
         </li>
         <li class="nav__list-item">
@@ -64,10 +59,10 @@
     <button type="submit" class="header__search" aria-label="Поиск по сайту"></button>
 
     <button class="header__burger" aria-label="Открыть меню" type="button">
-      <svg  viewbox="0 0 100 100" aria-hidden="true">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      <svg viewbox="0 0 100 100" aria-hidden="true">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
+        <path class="line line2" d="M 20,50 H 80"/>
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
       </svg>
     </button>
   </div>
@@ -140,7 +135,7 @@
     <div class="container how__container tabs">
       <h2 class="how__title section-title">Как мы работаем</h2>
 
-      <ul class="tabs__list list-reset ">
+      <ul class="tabs__list list-reset">
         <li class="tabs__item">
           <button class="tabs__btn" data-path="one">1 шаг</button>
         </li>
@@ -159,26 +154,19 @@
         <div class="tabs__item">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x, https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
 
-              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
-              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+              <source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x, https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
 
-              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
-              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x, https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
 
-              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
-              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x, https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x, https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
 
-              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
-              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x, https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
 
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
-              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x, https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
 
               <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
             </picture>
@@ -208,26 +196,19 @@
         <div class="tabs__item">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x, https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
 
-              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
-              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+              <source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x, https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
 
-              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
-              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x, https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
 
-              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
-              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x, https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x, https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
 
-              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
-              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x, https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
 
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
-              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x, https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
 
               <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
             </picture>
@@ -251,26 +232,19 @@
         <div class="tabs__item">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x, https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
 
-              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
-              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+              <source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x, https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
 
-              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
-              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x, https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
 
-              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
-              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x, https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x, https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
 
-              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
-              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x, https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
 
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
-              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x, https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
 
               <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
             </picture>
@@ -294,26 +268,19 @@
         <div class="tabs__item">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)" type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x, https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
 
-              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
-              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+              <source media="(min-width: 1024px)" type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x, https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
 
-              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
-              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x, https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
 
-              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
-              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x, https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x, https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
 
-              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
-              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x, https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
 
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
-              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x, https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
 
               <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
             </picture>
@@ -454,14 +421,11 @@
     <div class="footer-left">
       <div class="footer-left__logo-wrapper">
         <picture>
-          <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
-          https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x, https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
 
-          <source type="image/webp" srcset="https://via.placeholder.com/131x42.webp?text=131x42+webP+1x 1x,
-          https://via.placeholder.com/262x84.webp?text=262x84webP+2x 2x">
+          <source type="image/webp" srcset="https://via.placeholder.com/131x42.webp?text=131x42+webP+1x, https://via.placeholder.com/262x84.webp?text=262x84webP+2x 2x">
 
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
-          https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x, https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
 
           <img class="footer__logo logo" src="https://via.placeholder.com/131x42.png?text=131x42+png+1x" srcset="https://via.placeholder.com/262x84.png?text=262x84+png+2x 2x" alt="Логотип проектных систем Евклид">
         </picture>
@@ -520,7 +484,7 @@
           <button type="submit" class="request__btn btn">Отправить данные</button>
 
           <label class="request__check">
-            <input class="request__check-input visually-hidden " type="checkbox" name="personalData" value="agree" required checked>
+            <input class="request__check-input visually-hidden" type="checkbox" name="personalData" value="agree" required checked="checked">
 
             <span class="request__checkbox">
             </span>
@@ -535,5 +499,5 @@
     </p>
   </div>
 </footer>
-</body>
+<script src="./main.js"></script></body>
 </html>

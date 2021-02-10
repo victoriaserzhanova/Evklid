@@ -32,13 +32,9 @@
   background-image: url("../images/320/hero-slide-1-320.jpg");
 }
 
-.hero-pagination {
-  display: none;
-}
-
 .hero__content {
   padding: 33px 24px;
-  min-height: 262px;
+  min-height: 292px;
 }
 
 .hero__title {
@@ -49,7 +45,6 @@
   line-height: 24px;
   margin: 0 0 7px;
   text-align: center;
-  
 }
 
 .hero__descr {
@@ -64,6 +59,8 @@
 }
 
 .hero__btn {
+  position: relative;
+  z-index: 50;
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
@@ -75,5 +72,17 @@
   cursor: pointer;
   margin-left: 41px;
   color: var(--bg-color);
+}
+
+.hero__container .hero-pagination .swiper-pagination-bullet {
+  margin: 0 10px 10px;
+  opacity: 0.4;
+  width: 15px;
+  height: 15px;
+  background-color: var(--bg-color);
+}
+
+.hero__container .hero-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
