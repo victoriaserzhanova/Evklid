@@ -459,7 +459,7 @@
     margin-bottom: 48px;
   }
 
-  .tabs__item{
+  .tabs__body{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -558,15 +558,15 @@
     display: none;
   }
 
-  .header__nav {
-    display: block;
-    margin-left: auto;
-  }
-
   .header__search {
     height: 100px;
     width: 80px;
     margin-left: 45px;
+  }
+
+  .header__nav {
+    display: block;
+    margin-left: auto;
   }
 
   /* HERO */

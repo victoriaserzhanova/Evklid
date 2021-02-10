@@ -1,5 +1,6 @@
 // import './menu';
+import './burger';
 import './swiper';
-import './activateTargetTab';
+import './tabs';
 import 'swiper/swiper-bundle.min.css';
 import './css/main.css';

@@ -1152,15 +1152,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/activateTargetTab.js":
-/*!**********************************!*\
-  !*** ./src/activateTargetTab.js ***!
-  \**********************************/
+/***/ "./src/burger.js":
+/*!***********************!*\
+  !*** ./src/burger.js ***!
+  \***********************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
 /***/ (() => {
 
-eval("\n\n(function (){\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.tabs__btn').forEach(function(tabsLink) {\n      tabsLink.addEventListener('click', function(event) {\n        const path = event.currentTarget.dataset.path\n\n        document.querySelectorAll('.tabs__section').forEach(function(tabSection) {\n          tabSection.classList.remove('tabs__section--active')\n        });\n        document.querySelector(`[data-target='${path}']`).classList.add('tabs__section--active');\n      })\n    })\n  })\n})()\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/activateTargetTab.js?");
+eval("\n\nconsole.log('burger');\n\n(function () {\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('#burgerOpen').addEventListener('click', function() {\n      document.querySelector('#menu').classList.add('menu--visible');\n    });\n    document.querySelector('#burgerClose').addEventListener('click', function() {\n      document.querySelector('#menu').classList.remove('menu--visible');\n    });\n  })\n})()\n\n\n//# sourceURL=webpack://evklid/./src/burger.js?");
 
 /***/ }),
 
@@ -1173,7 +1173,7 @@ eval("\n\n(function (){\n  document.addEventListener('DOMContentLoaded', functio
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swiper */ \"./src/swiper.js\");\n/* harmony import */ var _activateTargetTab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./activateTargetTab */ \"./src/activateTargetTab.js\");\n/* harmony import */ var _activateTargetTab__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_activateTargetTab__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/swiper-bundle.min.css */ \"./node_modules/swiper/swiper-bundle.min.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/main.css */ \"./src/css/main.css\");\n// import './menu';\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burger */ \"./src/burger.js\");\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiper */ \"./src/swiper.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ \"./src/tabs.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/swiper-bundle.min.css */ \"./node_modules/swiper/swiper-bundle.min.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/main.css */ \"./src/css/main.css\");\n// import './menu';\n\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/index.js?");
 
 /***/ }),
 
@@ -1187,6 +1187,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _swi
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/esm/components/core/core-class.js\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/esm/components/navigation/navigation.js\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/esm/components/pagination/pagination.js\");\n\r\n\r\nswiper__WEBPACK_IMPORTED_MODULE_0__.default.use([swiper__WEBPACK_IMPORTED_MODULE_1__.default, swiper__WEBPACK_IMPORTED_MODULE_2__.default]);\r\n\r\n\r\n//swiper in slider section\r\nconst mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default('.swiper-container',  {\r\n\tloop: true,\r\n\tloopedSlides: 3,\r\n\tcenteredSlides: true,\r\n\tslidesPerView: 'auto',\r\n\tspaceBetween: 33,\r\n\tpagination: {\r\n\t\tel: '.hero-pagination',\r\n\t\tclickable: true,\r\n\t},\r\n});\r\n\n\n//# sourceURL=webpack://evklid/./src/swiper.js?");
+
+/***/ }),
+
+/***/ "./src/tabs.js":
+/*!*********************!*\
+  !*** ./src/tabs.js ***!
+  \*********************/
+/*! unknown exports (runtime-defined) */
+/*! runtime requirements:  */
+/***/ (() => {
+
+eval("\n\n(function (){\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.tabs__btn').forEach(function(tabsLink) {\n      tabsLink.addEventListener('click', function(event) {\n        const path = event.currentTarget.dataset.path\n\n        document.querySelectorAll('.tabs__section').forEach(function(tabSection) {\n          tabSection.classList.remove('tabs__section--active')\n        });\n        document.querySelector(`[data-target='${path}']`).classList.add('tabs__section--active');\n      })\n    })\n  })\n})()\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/tabs.js?");
 
 /***/ })
 
