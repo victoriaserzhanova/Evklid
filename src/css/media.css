@@ -257,27 +257,46 @@
     letter-spacing: -1px;
   }
 
-  .questions__list-item::after {
-    width: 50px;
-    height: 50px;
-    top: 27%;
-    background-size: 60%;
-  }
-
-  .questions__open-btn {
+  .accordion__title {
     line-height: 32px;
     font-size: 20px;
-    padding: 28px 157px 24px 0;
+    padding: 34px 157px 25px 0;
     font-weight: 700;
   }
 
-  .questions__open-btn--second {
+  .accordion__title--second {
     padding-right: 157px;
+    padding-top: 26px;
   }
 
-  .questions__open-btn--third {
+  .accordion__title--third {
     padding-right: 196px;
+    padding-top: 23px;
   }
+
+  .accordion__title--fourth {
+    padding-top: 24px;
+  }
+
+  .accordion__title--fifth {
+    padding-top: 24px;
+  }
+
+  .accordion__title::after {
+    width: 50px;
+    height: 50px;
+    top: 33%;
+    background-size: 60%;
+  }
+
+  .accordion__text {
+    font-size: 18px;
+    line-height: 28px;
+   }
+
+  .accordion__content {
+    min-height: 580px;
+   }
 
 /* FOOTER */
 
@@ -472,14 +491,33 @@
     letter-spacing: 0;
   }
 
-  .questions__open-btn {
-    padding: 10px 157px 10px 0;
-    min-height: 116px;
+  .accordion__title {
+    padding: 48px 157px 41px 0;
   }
 
-  .questions__list-item::after {
-    top: 33%;
+  .accordion__title--second {
+    padding-right: 157px;
+    padding-top: 24px;
+    padding-bottom: 26px;
   }
+
+  .accordion__title--third {
+    padding-right: 196px;
+    padding-top: 39px;
+  }
+
+  .accordion__title--fourth {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .accordion__title--fifth {
+    padding-top: 39px;
+  }
+
+  .accordion__content {
+    min-height: 450px;
+   }
 
 /* FOOTER */
 
@@ -670,11 +708,45 @@
     padding-bottom: 89px;
   }
 
-  .questions__open-btn {
-    padding: 43px 157px 36px 0;
+  .accordion__title {
+    padding: 42px 157px 29px 0;
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
+  }
+
+  .accordion__title--second {
+    padding-bottom: 42px;
+  }
+
+  .accordion__title--third {
+    padding-bottom: 38px;
+  }
+
+  .accordion__title--fourth {
+    padding-top: 40px;
+    padding-bottom: 41px;
+  }
+
+  .accordion__title--fifth {
+    padding-top: 46px;
+    padding-bottom: 35px;
+  }
+
+  .accordion__content {
+    width: 57%;
+    min-height: 453px;
+  }
+
+   .accordion__text {
+     margin: 0;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 32px;
+  }
+
+  .accordion__text:not(:last-child) {
+    margin-bottom: 32px;
   }
 
   /* FOOTER */
