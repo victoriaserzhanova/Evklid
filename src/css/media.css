@@ -4,6 +4,32 @@
     padding: 0;
   }
 
+  .menu{
+  left: 0;
+  width: 300px;
+  height: 770px;
+  }
+
+  .menu__btn-close {
+    margin-left: 42px;
+    margin-top: 11px;
+    height: 45px;
+    width: 39px;
+  }
+
+  .menu__list {
+    padding-top: 102px;
+    padding-left: 86px;
+  }
+
+  .menu__list-item:not(:last-child) {
+    margin-bottom: 63px;
+  }
+
+  .menu__link {
+    font-size: 24px;
+  }
+
   .header__container {
     min-height: 69px;
     justify-content: space-between
@@ -372,6 +398,19 @@
   .container {
     width: 924px;
   }
+
+  .menu{
+    width: 420px;
+    }
+
+    .menu__btn-close {
+      margin-top: 31px;
+    }
+
+    .menu__list {
+      padding-top: 82px;
+      padding-left: 71px;
+    }
 
   .header__container {
     min-height: 100px;

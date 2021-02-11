@@ -6,7 +6,7 @@
   height: 307px;
   z-index: 1000;
   background-color: var(--bg-color);
-  transform: translateX(101%);
+  transform: translateX(901%);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -14,7 +14,7 @@
   transform: none;
 }
 
-.menu__btn-close{
+.menu__btn-close {
 margin-left: 156px;
 background-color: transparent;
 border: none;
