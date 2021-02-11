@@ -1160,7 +1160,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements:  */
 /***/ (() => {
 
-eval("\n\nconsole.log('burger');\n\n(function () {\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('#burgerOpen').addEventListener('click', function() {\n      document.querySelector('#menu').classList.add('menu--visible');\n    });\n    document.querySelector('#burgerClose').addEventListener('click', function() {\n      document.querySelector('#menu').classList.remove('menu--visible');\n    });\n  })\n})()\n\n\n//# sourceURL=webpack://evklid/./src/burger.js?");
+eval("\n\nconsole.log('burger');\n\n(function () {\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('#burger').addEventListener('click', function() {\n      document.querySelector('#menu').classList.add('menu--visible');\n    });\n    document.querySelector('#btnClose').addEventListener('click', function() {\n      document.querySelector('#menu').classList.remove('menu--visible');\n    });\n  })\n})()\n\n\n//# sourceURL=webpack://evklid/./src/burger.js?");
 
 /***/ }),
 
