@@ -1,302 +1,550 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Евклид проектные системы</title>
-	<link rel="preload" href="./fonts/montserrat-regular.woff2" as="font">
-	<link rel="preload" href="./fonts/montserrat-medium.woff2" as="font">
-	<link rel="preload" href="./fonts/montserrat-semibold.woff2" as="font">
-	<link rel="preload" href="./fonts/montserrat-bold.woff2" as="font">
-	<link rel="preload" href="./fonts/montserrat-extrabold.woff2" as="font">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Евклид проектные системы</title>
+  <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="./fonts/montserrat-semibold.woff2" as="font">
+  <link rel="preload" href="./fonts/montserrat-bold.woff2" as="font">
+  <link rel="preload" href="./fonts/montserrat-extrabold.woff2" as="font">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
 </head>
 <body>
-<header class="header">
-	<div class="container header__container">
-		<div class="header__logo-wrapper">
-			<picture>
-				<source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
-				https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo-wrapper">
+        <picture>
+          <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
+          https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
 
-				<source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x 1x,
-				https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x 1x,
+          https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
 
-				<source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x 1x,
-				https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
+          <source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x 1x,
+          https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
 
-				<source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
-				https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
+          <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
+          https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
 
-				<source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x 1x,
-				https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x 1x,
+          https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
 
-				<img class="header__logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/194x62.png?text=194x62+png+2x 2x" alt="Логотип проектных систем Евклид">
-			</picture>
-		</div>
+          <img class="header__logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/194x62.png?text=194x62+png+2x 2x" alt="Логотип проектных систем Евклид">
+        </picture>
+      </div>
 
-		<nav class="header__nav nav">
-			<ul class="nav__list list-reset ">
-				<li class="nav__list-item ">
-					<a href="#" class="nav__link">О нас</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Проекты</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Этапы</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Отзывы</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Контакты</a>
-				</li>
-			</ul>
-		</nav>
+      <div id="menu" class="menu">
+        <button id="btnClose" class="menu__btn-close" aria-label="Закрыть меню" type="button">
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24.4246" height="2.44246" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.72876 0.00170898)" fill="#C4C4C4"/>
+            <rect width="24.4246" height="2.44246" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 17.2729)" fill="#C4C4C4"/>
+          </svg>
+        </button>
 
-		<button type="submit" class="header__search" aria-label="Поиск по сайту"></button>
+        <nav class="menu__nav">
+          <ul class="menu__list list-reset">
+            <li class="menu__list-item ">
+              <a href="#" class="menu__link">О нас</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Проекты</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Этапы</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Отзывы</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-		<button class="header__burger" aria-label="Открыть меню" type="button">
-			<svg  viewbox="0 0 100 100" aria-hidden="true">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-      </svg>
-		</button>
-	</div>
-</header>
+      <button type="submit" class="header__search" aria-label="Поиск по сайту"></button>
+
+      <button id="burger" class="header__burger burger" aria-label="Открыть меню" type="button">
+        <svg  viewbox="0 0 100 100" aria-hidden="true">
+          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </button>
+    </div>
+  </header>
 
 <main>
-	<section class="hero">
-		<div class="container hero__container">
-			<h1 class="hero__title">Проектные решения любой сложности</h1>
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">Проектные решения любой сложности</h1>
 
-			<p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
+        <p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
 
-			<button type="button" class="hero__btn btn">Заказать расчёт</button>
-		</div>
-	</section>
+        <button type="button" class="hero__btn">Заказать расчёт</button>
+      </div>
 
-	<section class="about-us">
-		<div class="container about-us__container">
-			<h2 class="about-us__title section-title">О нас</h2>
+      <div class="swiper-container hero__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero__slide hero__slide--1"></div>
+          <div class="swiper-slide hero__slide hero__slide--2"></div>
+          <div class="swiper-slide hero__slide hero__slide--3"></div>
+        </div>
 
-			<p class="about-us__descr">Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности.
-				 А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует
-					от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип
-					будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач.
-					 Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
-			</p>
+        <div class="swiper-pagination hero-pagination"></div>
+      </div>
+    </div>
+  </section>
 
-			<div class="about-us__wrapper">
-				<div class="about-us__content">
-					<p class="about-us__text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
+  <section class="about-us">
+    <div class="container about-us__container">
+      <h2 class="about-us__title section-title">О нас</h2>
 
-					<a class="about-us__link">Подробнее</a>
-				</div>
-			</div>
+      <p class="about-us__descr">Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности.
+         А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует
+          от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип
+          будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач.
+           Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
+      </p>
 
-			<ul class="about-us__list list-reset">
-				<li class="about-us__list-item about-us__list-item--theme-package">
-					<span class="about-us__item-span">Консультация с широким активом</span>
+      <div class="about-us__wrapper">
+        <div class="about-us__content">
+          <p class="about-us__text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
 
-					<p class="about-us__item-text">
-						А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных,
-							так и внешне зависимых концептуальных решений.
-					</p>
-				</li>
-				<li class="about-us__list-item about-us__list-item--theme-settings">
-					<span class="about-us__item-span">В своём стремлении повысить </span>
+          <a class="about-us__link">Подробнее</a>
+        </div>
+      </div>
 
-					<p class="about-us__item-text">
-						Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
-							эксперимент проверки прогресса профессионального сообщества.
-					</p>
-				</li>
-			</ul>
-		</div>
-	</section>
+      <ul class="about-us__list list-reset">
+        <li class="about-us__list-item about-us__list-item--theme-package">
+          <span class="about-us__item-span">Консультация с широким активом</span>
 
-	<section class="how">
-		<div class="container how__container">
-			<h2 class="how__title section-title">Как мы работаем</h2>
+          <p class="about-us__item-text">
+            А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных,
+              так и внешне зависимых концептуальных решений.
+          </p>
+        </li>
+        <li class="about-us__list-item about-us__list-item--theme-settings">
+          <span class="about-us__item-span">В своём стремлении повысить </span>
 
-			<ul class="how__tabs tabs list-reset ">
-				<li class="tabs__item">
-					<button type="button" class="tabs__btn">1 шаг</button>
-				</li>
-				<li class="tabs__item">
-					<button type="button" class="tabs__btn">2 шаг</button>
-				</li>
-				<li class="tabs__item">
-					<button type="button" class="tabs__btn">3 шаг</button>
-				</li>
-				<li class="tabs__item">
-					<button type="button" class="tabs__btn">4 шаг</button>
-				</li>
-			</ul>
+          <p class="about-us__item-text">
+            Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
+              эксперимент проверки прогресса профессионального сообщества.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-			<ol class="how__content list-reset ">
-				<li class="how__item">
-					<div class="how__image-wrapper">
-						<picture>
-							<source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-							https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+  <section class="how">
+    <div class="container how__container tabs">
+      <h2 class="how__title section-title">Как мы работаем</h2>
 
-							<source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
-							https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+      <ul class="tabs__list list-reset ">
+        <li class="tabs__item">
+          <button class="tabs__btn" data-path="one">1 шаг</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" data-path="two">2 шаг</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" data-path="three">3 шаг</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" data-path="four">4 шаг</button>
+        </li>
+      </ul>
 
-							<source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
-							https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+      <section class="tabs__section tabs__section--active" data-target="one">
+        <div class="tabs__body">
+          <div class="tabs__image-wrapper">
+            <picture>
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab1-1920.webp 1x,
+              ./images/1920/tab1-2x-1920.webp 2x">
 
-							<source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
-							https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
+              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
 
-							<source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-							https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
+              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
 
-							<source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
-							https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
+              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-							<source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
-							https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab1-1920.jpg 1x,
+              ./images/1920/tab1-2x-1920.jpg 2x">
 
-							<img class="how__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
-						</picture>
-					</div>
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
+              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
 
-					<div class="how__content-wrapper">
-						<h3 class="how__heading">Проводим консультацию</h3>
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
+              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
 
-						<p class="how__descr">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
-							 В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
-							 инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно
-								образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
-								целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные
-								особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
-						</p>
+              <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
+            </picture>
+          </div>
 
-						<div class="how__props">
-							<a href="#" class="how__details-link">Подробнее</a>
+          <div class="tabs__content-wrapper">
+            <h3 class="tabs__heading">Проводим консультацию</h3>
 
-							<a href="#" class="how__contract-link" download>Договор</a>
-						</div>
-					</div>
-				</li>
-			</ol>
-		</div>
-	</section>
+            <p class="tabs__descr">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
+               В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
+               инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно
+                образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
+                целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные
+                особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+            </p>
 
-	<section class="questions">
-		<div class="container questions__container">
-			<h2 class="questions__title section-title">Часто задаваемые вопросы</h2>
+            <div class="tabs__props">
+              <a href="#" class="tabs__details-link">Подробнее</a>
 
-			<ul class="questions__list list-reset ">
-				<li class="questions__list-item">
-					<button type="button" class="questions__open-btn">Из чего формируется конечная стоимость проекта?</button>
-				</li>
-				<li class="questions__list-item">
-					<button type="button" class="questions__open-btn questions__open-btn--second">У меня есть свой проект. Сможем ли мы его доработать <span class="questions__btn-span"> /</span> реализовать?</button>
-				</li>
-				<li class="questions__list-item">
-					<button type="button" class="questions__open-btn questions__open-btn--third">Я выбираю между разными компаниями. В чём ваше отличие?</button>
-				</li>
-				<li class="questions__list-item">
-					<button type="button" class="questions__open-btn">Могу ли я делегировать вам работу <span class="questions__btn-span">/</span> согласование с подрядчиком <span class="questions__btn-span">/</span> организацией?</button>
-				</li>
-				<li class="questions__list-item">
-					<button type="button" class="questions__open-btn">Могу ли я вернуть деньги на каком-либо из этапов работ?</button>
-				</li>
-			</ul>
-		</div>
-	</section>
+              <a href="#" class="tabs__contract-link" download>Договор</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabs__section" data-target="two">
+        <div class="tabs__body">
+          <div class="tabs__image-wrapper">
+            <picture>
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab2-1920.webp 1x,
+              ./images/1920/tab2-2x-1920.webp 2x">
+
+              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
+              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
+              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
+              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab2-1920.jpg 1x,
+              ./images/1920/tab2-2x-1920.jpg 2x">
+
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
+              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
+              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+
+              <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
+            </picture>
+          </div>
+
+          <div class="tabs__content-wrapper">
+            <h3 class="tabs__heading">Составляем смету</h3>
+
+            <p class="tabs__descr">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+            </p>
+
+            <div class="tabs__props">
+              <a href="#" class="tabs__details-link">Подробнее</a>
+
+              <a href="#" class="tabs__contract-link" download>Договор</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabs__section" data-target="three">
+        <div class="tabs__body">
+          <div class="tabs__image-wrapper">
+            <picture>
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab3-1920.webp 1x,
+              ./images/1920/tab3-2x-1920.webp 2x">
+
+              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
+              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
+              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
+              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab3-1920.jpg 1x,
+              ./images/1920/tab3-2x-1920.jpg 2x">
+
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
+              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
+              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+
+              <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
+            </picture>
+          </div>
+
+          <div class="tabs__content-wrapper">
+            <h3 class="tabs__heading">Привлекаем подрядчиков</h3>
+
+            <p class="tabs__descr">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+            </p>
+
+            <div class="tabs__props">
+              <a href="#" class="tabs__details-link">Подробнее</a>
+
+              <a href="#" class="tabs__contract-link" download>Договор</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="tabs__section" data-target="four">
+        <div class="tabs__body">
+          <div class="tabs__image-wrapper">
+            <picture>
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab4-1920.webp 1x,
+              ./images/1920/tab4-2x-1920.webp 2x">
+
+              <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
+              https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
+
+              <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/668x284.webp?text=668x284+webP+1x 1x,
+              https://via.placeholder.com/1336x568.webp?text=1336x568+webP+2x 2x">
+
+              <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
+              https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
+
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab4-1920.jpg 1x,
+              ./images/1920/tab4-2x-1920.jpg 2x">
+
+              <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
+              https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
+
+              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x284.jpg?text=668x284+jpg+1x 1x,
+              https://via.placeholder.com/1336x568.jpg?text=1336x568+jpg+2x 2x">
+
+              <img class="tabs__img" src="https://via.placeholder.com/290x160.jpg?text=290x160+jpg+1x" srcset="https://via.placeholder.com/580x320.jpg?text=580x320+jpg+2x 2x" alt="Рабочий процесс">
+            </picture>
+          </div>
+
+          <div class="tabs__content-wrapper">
+            <h3 class="tabs__heading">Инспектируем все этапы работ</h3>
+
+            <p class="tabs__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+            </p>
+
+            <div class="tabs__props">
+              <a href="#" class="tabs__details-link">Подробнее</a>
+
+              <a href="#" class="tabs__contract-link" download>Договор</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="questions">
+    <div class="container questions__container">
+      <h2 class="questions__title section-title">Часто задаваемые вопросы</h2>
+
+      <ul class="questions__list accordion list-reset" id="accordion">
+        <li class="accordion__item">
+          <h3 class="accordion__title">Из чего формируется конечная стоимость проекта?</h3>
+          <div class="accordion__content">
+            <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые,
+                в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой
+                ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                 И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                 должны быть указаны как претенденты на роль ключевых факторов.
+            </p>
+
+            <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+                Явные признаки победы институционализации набирают популярность среди определенных слоев населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+                исключительно положительном свете.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <h3 class="accordion__title accordion__title--second">У меня есть свой проект. Сможем ли мы его доработать
+            <span class="accordion__span"> /</span>
+             реализовать?
+          </h3>
+          <div class="accordion__content">
+            <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые,
+                в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой
+                ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                 И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                 должны быть указаны как претенденты на роль ключевых факторов.
+            </p>
+
+            <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+                Явные признаки победы институционализации набирают популярность среди определенных слоев населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+                исключительно положительном свете.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <h3 class="accordion__title accordion__title--third">Я выбираю между разными компаниями. В чём ваше отличие?</h3>
+          <div class="accordion__content">
+            <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые,
+                в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой
+                ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                 И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                 должны быть указаны как претенденты на роль ключевых факторов.
+            </p>
+
+            <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+                Явные признаки победы институционализации набирают популярность среди определенных слоев населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+                исключительно положительном свете.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <h3 class="accordion__title accordion__title--fourth">Могу ли я делегировать вам работу
+            <span class="questions__btn-span">/</span>
+             согласование с подрядчиком
+             <span class="questions__btn-span">/</span>
+              организацией?
+          </h3>
+          <div class="accordion__content">
+            <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые,
+                в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой
+                ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                 И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                 должны быть указаны как претенденты на роль ключевых факторов.
+            </p>
+
+            <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+                Явные признаки победы институционализации набирают популярность среди определенных слоев населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+                исключительно положительном свете.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <h3 class="accordion__title accordion__title--fifth">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+          <div class="accordion__content">
+            <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые,
+                в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой
+                ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                 И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                 должны быть указаны как претенденты на роль ключевых факторов.
+            </p>
+
+            <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+                Явные признаки победы институционализации набирают популярность среди определенных слоев населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+                исключительно положительном свете.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-	<div class="container footer__container">
-		<div class="footer-left">
-			<div class="footer-left__logo-wrapper">
-				<picture>
-					<source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
-					https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
+  <div class="container footer__container">
+    <div class="footer-left">
+      <div class="footer-left__logo-wrapper">
+        <picture>
+          <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
+          https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
 
-					<source type="image/webp" srcset="https://via.placeholder.com/131x42.webp?text=131x42+webP+1x 1x,
-					https://via.placeholder.com/262x84.webp?text=262x84webP+2x 2x">
+          <source type="image/webp" srcset="https://via.placeholder.com/131x42.webp?text=131x42+webP+1x 1x,
+          https://via.placeholder.com/262x84.webp?text=262x84webP+2x 2x">
 
-					<source media="(min-width: 768px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
-					https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
+          https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
 
-					<img class="footer__logo logo" src="https://via.placeholder.com/131x42.png?text=131x42+png+1x" srcset="https://via.placeholder.com/262x84.png?text=262x84+png+2x 2x" alt="Логотип проектных систем Евклид">
-				</picture>
-			</div>
+          <img class="footer__logo logo" src="https://via.placeholder.com/131x42.png?text=131x42+png+1x" srcset="https://via.placeholder.com/262x84.png?text=262x84+png+2x 2x" alt="Логотип проектных систем Евклид">
+        </picture>
+      </div>
 
-			<nav class="footer__menu">
-				<ul class="footer__list list-reset">
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">О нас</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Проекты</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Отзывы</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Договор оферты</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Договор подряда</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Конфиденциальность</a>
-					</li>
-					<li class="footer__list-item">
-						<a href="#" class="footer__menu-link">Партнёрское соглашение</a>
-					</li>
-				</ul>
-			</nav>
+      <nav class="footer__menu">
+        <ul class="footer__list list-reset">
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">О нас</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Проекты</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Отзывы</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Договор оферты</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Договор подряда</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Конфиденциальность</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#" class="footer__menu-link">Партнёрское соглашение</a>
+          </li>
+        </ul>
+      </nav>
 
-			<ul class="socials list-reset">
-				<li class="socials__item">
-					<a href="https://www.facebook.com/" aria-label="Фейсбук" target="_blank" class="socials__link socials__link--fb"></a>
-				</li>
-				<li class="socials__item">
-					<a href="https://vk.com/" aria-label="Вконтакте" target="_blank" class="socials__link socials__link--vk"></a>
-				</li>
-				<li class="socials__item">
-					<a href="https://www.instagram.com/" aria-label="Инстаграм" target="_blank" class="socials__link socials__link--inst"></a>
-				</li>
-			</ul>
-		</div>
+      <ul class="socials list-reset">
+        <li class="socials__item">
+          <a href="https://www.facebook.com/" aria-label="Фейсбук" target="_blank" class="socials__link socials__link--fb"></a>
+        </li>
+        <li class="socials__item">
+          <a href="https://vk.com/" aria-label="Вконтакте" target="_blank" class="socials__link socials__link--vk"></a>
+        </li>
+        <li class="socials__item">
+          <a href="https://www.instagram.com/" aria-label="Инстаграм" target="_blank" class="socials__link socials__link--inst"></a>
+        </li>
+      </ul>
+    </div>
 
-		<div class="footer-request request">
-			<h2 class="request__title">Оставить заявку</h2>
+    <div class="footer-request request">
+      <h2 class="request__title">Оставить заявку</h2>
 
-			<form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="request__form">
-				<input type="text" name="userName" class="request__input" required placeholder="Фамилия, имя и отчество*">
+      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="request__form">
+        <input type="text" name="userName" class="request__input" required placeholder="Фамилия, имя и отчество*">
 
-				<input type="email" name="email" class="request__input" required placeholder="E-mail*">
+        <input type="email" name="email" class="request__input" required placeholder="E-mail*">
 
-				<textarea name="message" rows="7" class="request__input textarea" placeholder="Сообщение"></textarea>
+        <textarea name="message" rows="7" class="request__input textarea" placeholder="Сообщение"></textarea>
 
-				<div class="request__props">
-					<button type="submit" class="request__btn btn">Отправить данные</button>
+        <div class="request__props">
+          <button type="submit" class="request__btn btn">Отправить данные</button>
 
-					<label class="request__check">
-						<input class="request__check-input visually-hidden " type="checkbox" name="personalData" value="agree" required checked>
+          <label class="request__check">
+            <input class="request__check-input visually-hidden " type="checkbox" name="personalData" value="agree" required checked>
 
-						<span class="request__checkbox">
-						</span>
-						Согласен на обработку данных
-					</label>
-				</div>
-			</form>
-		</div>
+            <span class="request__checkbox">
+            </span>
+            Согласен на обработку данных
+          </label>
+        </div>
+      </form>
+    </div>
 
-		<p class="footer-text">
-			Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов.
-		</p>
-	</div>
+    <p class="footer-text">
+      Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов.
+    </p>
+  </div>
 </footer>
 </body>
 </html>

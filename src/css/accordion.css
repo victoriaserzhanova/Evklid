@@ -1,0 +1,59 @@
+.accordion__item {
+  border-top: 1px solid var(--footer-font-color);
+}
+
+.accordion__item:last-child {
+  border-bottom: 1px solid var(--footer-font-color);
+}
+
+.accordion__title {
+  position: relative;
+  margin: 0;
+  padding: 21px 61px 22px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--font-color);
+}
+
+.accordion__title--second {
+  padding-right: 64px;
+}
+
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--light-gray-color);
+  right: 0;
+  top: 37%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url("../images/320/how-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s;
+}
+
+.ui-accordion-header-active.accordion__title::after {
+  transform: rotate(45deg);
+}
+
+.accordion__span {
+  color: var(--footer-font-color);
+}
+
+.accordion__content {
+ padding-bottom: 30px;
+}
+
+.accordion__text {
+  margin: 0;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.accordion__text:not(:last-child) {
+  margin-bottom: 10px;
+}

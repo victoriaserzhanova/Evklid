@@ -7,46 +7,4 @@
   margin: 0 0 12px;
 }
 
-.questions__list-item {
-  position: relative;
-  border-top: 1px solid var(--footer-font-color);
-}
-
-.questions__list-item:last-child {
-  border-bottom: 1px solid var(--footer-font-color);
-}
-
-.questions__list-item::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: var(--light-gray-color);
-  right: 0;
-  top: 37%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-image: url("../images/320/how-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.questions__open-btn {
-  line-height: 24px;
-  padding: 21px 61px 22px 0;
-  background: transparent;
-  border: none;
-  font-weight: 500;
-  color: var(--font-color);
-  text-align: left;
-}
-
-.questions__open-btn--second {
-  padding-right: 64px;
-}
-
-.questions__btn-span {
-  color: var(--footer-font-color);
-}
-
 
