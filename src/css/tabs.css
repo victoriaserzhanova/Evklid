@@ -30,6 +30,11 @@
   overflow: hidden;
 }
 
+.tabs__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .tabs__heading {
   margin: 0 0 6px;
   font-size: 18px;
@@ -37,11 +42,8 @@
   line-height: 1;
 }
 
-.tabs__descr {
-  margin: 0 0 20px;
-}
-
 .tabs__props {
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

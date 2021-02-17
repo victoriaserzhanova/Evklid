@@ -17,10 +17,6 @@
   display: none;
 }
 
-.header__nav {
-  display: none;
-}
-
 .header__burger {
   margin-left: auto;
   margin-right: -8px;

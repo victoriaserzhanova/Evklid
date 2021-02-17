@@ -1,4 +1,3 @@
-// import './menu';
 import './burger';
 import './swiper';
 import './tabs';

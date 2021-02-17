@@ -18,88 +18,69 @@
   </script>
 </head>
 <body>
-<header class="header">
-  <div class="container header__container">
-    <div id="menu" class="menu">
-      <button id="btnClose" class="menu__btn-close" aria-label="Закрыть меню" type="button">
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="24.4246" height="2.44246" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.72876 0.00170898)" fill="#C4C4C4"/>
-          <rect width="24.4246" height="2.44246" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 17.2729)" fill="#C4C4C4"/>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo-wrapper">
+        <picture>
+          <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
+          https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
+
+          <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x 1x,
+          https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
+
+          <source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x 1x,
+          https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
+
+          <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
+          https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
+
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x 1x,
+          https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
+
+          <img class="header__logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/194x62.png?text=194x62+png+2x 2x" alt="Логотип проектных систем Евклид">
+        </picture>
+      </div>
+
+      <div id="menu" class="menu">
+        <button id="btnClose" class="menu__btn-close" aria-label="Закрыть меню" type="button">
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24.4246" height="2.44246" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.72876 0.00170898)" fill="#C4C4C4"/>
+            <rect width="24.4246" height="2.44246" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 17.2729)" fill="#C4C4C4"/>
+          </svg>
+        </button>
+
+        <nav class="menu__nav">
+          <ul class="menu__list list-reset">
+            <li class="menu__list-item ">
+              <a href="#" class="menu__link">О нас</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Проекты</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Этапы</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Отзывы</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <button type="submit" class="header__search" aria-label="Поиск по сайту"></button>
+
+      <button id="burger" class="header__burger burger" aria-label="Открыть меню" type="button">
+        <svg  viewbox="0 0 100 100" aria-hidden="true">
+          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
         </svg>
       </button>
-
-      <nav class="menu__nav">
-        <ul class="menu__list list-reset">
-          <li class="menu__list-item ">
-            <a href="#" class="menu__link">О нас</a>
-          </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Проекты</a>
-          </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Этапы</a>
-          </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Отзывы</a>
-          </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
     </div>
-    <div class="header__logo-wrapper">
-      <picture>
-        <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/224x72.webp?text=224x72+webP+1x 1x,
-        https://via.placeholder.com/448x144.webp?text=448x144+webP+2x 2x">
-
-        <source media="(min-width: 768px)" type="image/webp" srcset="https://via.placeholder.com/150x47.webp?text=150x47+webP+1x 1x,
-        https://via.placeholder.com/300x94.webp?text=300x94+webP+2x 2x">
-
-        <source type="image/webp" srcset="https://via.placeholder.com/97x31.webp?text=97x31+webP+1x 1x,
-        https://via.placeholder.com/194x62.webp?text=194x62+webP+2x 2x">
-
-        <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/224x72.png?text=224x72+png+1x 1x,
-        https://via.placeholder.com/448x144.png?text=448x144+png+2x 2x">
-
-        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/150x47.png?text=150x47+png+1x 1x,
-        https://via.placeholder.com/300x94.png?text300x94+png+2x 2x">
-
-        <img class="header__logo" src="https://via.placeholder.com/97x31.png?text=97x31+png+1x" srcset="https://via.placeholder.com/194x62.png?text=194x62+png+2x 2x" alt="Логотип проектных систем Евклид">
-      </picture>
-    </div>
-
-    <nav class="header__nav nav">
-      <ul class="nav__list list-reset ">
-        <li class="nav__list-item ">
-          <a href="#" class="nav__link">О нас</a>
-        </li>
-        <li class="nav__list-item">
-          <a href="#" class="nav__link">Проекты</a>
-        </li>
-        <li class="nav__list-item">
-          <a href="#" class="nav__link">Этапы</a>
-        </li>
-        <li class="nav__list-item">
-          <a href="#" class="nav__link">Отзывы</a>
-        </li>
-        <li class="nav__list-item">
-          <a href="#" class="nav__link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-
-    <button type="submit" class="header__search" aria-label="Поиск по сайту"></button>
-
-    <button id="burger" class="header__burger burger" aria-label="Открыть меню" type="button">
-      <svg  viewbox="0 0 100 100" aria-hidden="true">
-        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-        <path class="line line2" d="M 20,50 H 80" />
-        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-      </svg>
-    </button>
-  </div>
-</header>
+  </header>
 
 <main>
   <section class="hero">
@@ -187,8 +168,8 @@
         <div class="tabs__body">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab1-1920.webp 1x,
+              ./images/1920/tab1-2x-1920.webp 2x">
 
               <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
               https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
@@ -199,8 +180,8 @@
               <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
               https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab1-1920.jpg 1x,
+              ./images/1920/tab1-2x-1920.jpg 2x">
 
               <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
               https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
@@ -236,8 +217,8 @@
         <div class="tabs__body">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab2-1920.webp 1x,
+              ./images/1920/tab2-2x-1920.webp 2x">
 
               <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
               https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
@@ -248,8 +229,8 @@
               <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
               https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab2-1920.jpg 1x,
+              ./images/1920/tab2-2x-1920.jpg 2x">
 
               <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
               https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
@@ -262,9 +243,9 @@
           </div>
 
           <div class="tabs__content-wrapper">
-            <h3 class="tabs__heading">TAB 2</h3>
+            <h3 class="tabs__heading">Составляем смету</h3>
 
-            <p class="tabs__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima iusto quod. Expedita delectus natus tenetur dolorem quis voluptatum illum molestias placeat magni, vero architecto quidem distinctio explicabo veniam doloremque?
+            <p class="tabs__descr">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
             </p>
 
             <div class="tabs__props">
@@ -275,12 +256,13 @@
           </div>
         </div>
       </section>
+
       <section class="tabs__section" data-target="three">
         <div class="tabs__body">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab3-1920.webp 1x,
+              ./images/1920/tab3-2x-1920.webp 2x">
 
               <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
               https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
@@ -291,8 +273,8 @@
               <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
               https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab3-1920.jpg 1x,
+              ./images/1920/tab3-2x-1920.jpg 2x">
 
               <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
               https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
@@ -305,9 +287,9 @@
           </div>
 
           <div class="tabs__content-wrapper">
-            <h3 class="tabs__heading">TAB 3</h3>
+            <h3 class="tabs__heading">Привлекаем подрядчиков</h3>
 
-            <p class="tabs__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima iusto quod. Expedita delectus natus tenetur dolorem quis voluptatum illum molestias placeat magni, vero architecto quidem distinctio explicabo veniam doloremque?
+            <p class="tabs__descr">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
             </p>
 
             <div class="tabs__props">
@@ -318,12 +300,13 @@
           </div>
         </div>
       </section>
+      
       <section class="tabs__section" data-target="four">
         <div class="tabs__body">
           <div class="tabs__image-wrapper">
             <picture>
-              <source media="(min-width: 1920px)"  type="image/webp" srcset="https://via.placeholder.com/870x465.webp?text=870x465+webP+1x 1x,
-              https://via.placeholder.com/1740x930.webp?text=1740x930+webP+2x 2x">
+              <source media="(min-width: 1920px)"  type="image/webp" srcset="./images/1920/tab4-1920.webp 1x,
+              ./images/1920/tab4-2x-1920.webp 2x">
 
               <source media="(min-width: 1024px)"  type="image/webp" srcset="https://via.placeholder.com/437x689.webp?text=437x689+webP+1x 1x,
               https://via.placeholder.com/874x1378.webp?text=874x1378+webP+2x 2x">
@@ -334,8 +317,8 @@
               <source type="image/webp" srcset="https://via.placeholder.com/290x160.webp?text=290x160+webP+1x 1x,
               https://via.placeholder.com/580x320.webp?text=580x320+webP+2x 2x">
 
-              <source media="(min-width: 1920px)" srcset="https://via.placeholder.com/870x465.jpg?text=870x465+jpg+1x 1x,
-              https://via.placeholder.com/1740x930.jpg?text=1740x930+jpg+2x 2x">
+              <source media="(min-width: 1920px)" srcset="./images/1920/tab4-1920.jpg 1x,
+              ./images/1920/tab4-2x-1920.jpg 2x">
 
               <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/437x689.jpg?text=437x689+jpg+1x 1x,
               https://via.placeholder.com/874x1378.jpg?text=874x1378+jpg+2x 2x">
@@ -348,9 +331,9 @@
           </div>
 
           <div class="tabs__content-wrapper">
-            <h3 class="tabs__heading">TAB 4</h3>
+            <h3 class="tabs__heading">Инспектируем все этапы работ</h3>
 
-            <p class="tabs__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima iusto quod. Expedita delectus natus tenetur dolorem quis voluptatum illum molestias placeat magni, vero architecto quidem distinctio explicabo veniam doloremque?
+            <p class="tabs__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
             </p>
 
             <div class="tabs__props">

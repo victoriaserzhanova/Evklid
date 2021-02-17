@@ -1160,7 +1160,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements:  */
 /***/ (() => {
 
-eval("\n\nconsole.log('burger');\n\n(function () {\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('#burger').addEventListener('click', function() {\n      document.querySelector('#menu').classList.add('menu--visible');\n    });\n    document.querySelector('#btnClose').addEventListener('click', function() {\n      document.querySelector('#menu').classList.remove('menu--visible');\n    });\n  })\n})()\n\n\n//# sourceURL=webpack://evklid/./src/burger.js?");
+eval("\r\n\r\nconsole.log('burger');\r\n\r\n(function () {\r\n  document.addEventListener('DOMContentLoaded', function() {\r\n    document.querySelector('#burger').addEventListener('click', function() {\r\n      document.querySelector('#menu').classList.add('menu--visible');\r\n    });\r\n    document.querySelector('#btnClose').addEventListener('click', function() {\r\n      document.querySelector('#menu').classList.remove('menu--visible');\r\n    });\r\n  })\r\n})()\r\n\n\n//# sourceURL=webpack://evklid/./src/burger.js?");
 
 /***/ }),
 
@@ -1173,7 +1173,7 @@ eval("\n\nconsole.log('burger');\n\n(function () {\n  document.addEventListener(
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burger */ \"./src/burger.js\");\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiper */ \"./src/swiper.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ \"./src/tabs.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/swiper-bundle.min.css */ \"./node_modules/swiper/swiper-bundle.min.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/main.css */ \"./src/css/main.css\");\n// import './menu';\n\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burger */ \"./src/burger.js\");\n/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiper */ \"./src/swiper.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ \"./src/tabs.js\");\n/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/swiper-bundle.min.css */ \"./node_modules/swiper/swiper-bundle.min.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/main.css */ \"./src/css/main.css\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/index.js?");
 
 /***/ }),
 
@@ -1198,7 +1198,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 /*! runtime requirements:  */
 /***/ (() => {
 
-eval("\n\n(function (){\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.tabs__btn').forEach(function(tabsLink) {\n      tabsLink.addEventListener('click', function(event) {\n        const path = event.currentTarget.dataset.path\n\n        document.querySelectorAll('.tabs__section').forEach(function(tabSection) {\n          tabSection.classList.remove('tabs__section--active')\n        });\n        document.querySelector(`[data-target='${path}']`).classList.add('tabs__section--active');\n      })\n    })\n  })\n})()\n\n\n\n\n\n\n//# sourceURL=webpack://evklid/./src/tabs.js?");
+eval("\r\n\r\n(function (){\r\n  document.addEventListener('DOMContentLoaded', function() {\r\n    document.querySelectorAll('.tabs__btn').forEach(function(tabsLink) {\r\n      tabsLink.addEventListener('click', function(event) {\r\n        const path = event.currentTarget.dataset.path\r\n\r\n        document.querySelectorAll('.tabs__section').forEach(function(tabSection) {\r\n          tabSection.classList.remove('tabs__section--active')\r\n        });\r\n        document.querySelector(`[data-target='${path}']`).classList.add('tabs__section--active');\r\n      })\r\n    })\r\n  })\r\n})()\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://evklid/./src/tabs.js?");
 
 /***/ })
 

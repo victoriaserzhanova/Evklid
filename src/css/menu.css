@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   width: 200px;
-  height: 307px;
+  height: 339px;
   z-index: 1000;
   background-color: var(--bg-color);
   transform: translateX(901%);
@@ -12,6 +12,7 @@
 
 .menu--visible {
   transform: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .menu__btn-close {
@@ -30,7 +31,6 @@ width: 39px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow-y: auto;
 }
 
 .menu__list-item:not(:last-child) {
